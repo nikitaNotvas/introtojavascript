@@ -4,3 +4,14 @@
 }
 button{color: #000;
 }
+body{
+ font-style: italic;
+    text-align: center;
+    background-color: #000;
+    color: rgb(212, 181, 187);
+}
+
+button{ width:90px;
+height: 60px;}
+button:hover{color: red;
+font-size: large;}
