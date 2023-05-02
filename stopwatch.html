@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stopwatch.css">    <title>stopwatch</title>
+    <link rel="stylesheet" href="stopwatch.css">   
+     <title>Stopwatch</title>
 </head>
 <body>
 
 <H1 class="center">Stap! I, WOTcHA!</H1>
-<hr><br>
-<h2 id="digits">00:00:00</h2><br><hr>
+<hr>
+<h3 id="digits">00:00:00</h3><hr>
 <div class="button">
-<button onclick="start()">start</button>
-<button onclick="stop()">stop</button>
-<button onclick="reset()">reset</button>
-    <script src="stopwatch.js"></script>
+<button onclick="start()" id="sbut">Start</button>
+<button onclick="stop()">Pause</button>
+<button onclick="reset()">Reset</button>
+<button onclick="loop()"> Lap </button>
+<hr></div>
+<H2>Lap</H2>
+<Ul id ="loopi"></Ul>
 
-
+<script src="stopwatch.js"></script>
 </body>
 </html>
