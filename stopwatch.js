@@ -21,13 +21,16 @@ let digits = document.getElementById("digits")
 let interval;
 
 let startButton = document.getElementById('sbut')
+  
+let loopButton = document.getElementById("lbut")
 
-let lapList = document.getElementById('loopi')
+loopButton.disabled = true
 
 function start () {
 
     
 startButton.disabled = true
+loopButton.disabled = false
 
 interval = setInterval(function (){
     mil = mil+10
@@ -54,23 +57,41 @@ interval = setInterval(function (){
 }
 function stop () {
     startButton.disabled = false
+    loopButton.disabled = true
+
 
     clearInterval(interval)
+
+    
 }
+
+
+let lapList = document.getElementById('loopi')
+
+
+
 function reset () {
     startButton.disabled = false
+    loopButton.disabled = true
 
 stop()
 digits.innerHTML = "00:00:00"
 min = 0
 sec = 0
 mil = 0
+lapList.innerHTML = ""
+
+
+
+
 }
 
 function loop () { 
+
 let newListItem = document.createElement('li');
-newListItem.textContent = "digits";
+newListItem.textContent = digits.innerHTML = String(min).padStart(2, "0") + ":" + String(sec).padStart(2, "0") + ":" + mil/10;
 
 loopi.appendChild(newListItem);
+
 
 }
